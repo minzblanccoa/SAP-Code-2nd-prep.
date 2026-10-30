@@ -1,0 +1,6 @@
+<mvc:View controllerName="code2.odata21.code2.cl2.2106.controller.ODataView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    </Page>
+</mvc:View>

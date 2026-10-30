@@ -1,0 +1,66 @@
+<mvc:View controllerName="code2.cl2.code2.cl2.b2109.controller.View9"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="구구단을 외자">
+
+        <VBox>
+            <Panel headerText = "1번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+            <HBox>
+                <Input id = "gugudan1" width = "2rem" />
+                <Text text = "단" width = "2rem" />
+                <Button text = "Calcul"
+                        icon = "sap-icon://begin"
+                        type = "Success"
+                        press = "onClick()" />
+            </HBox>
+            </Panel>
+            <Panel headerText = "2번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+            <HBox>
+                <Button text = "for" press = "forClick()" width = "5rem" />
+                <Button text = "while" press = "whileClick()" width = "5rem" />
+                <Button text = "for + while" press = "mixClick()" />
+             
+            </HBox>
+            </Panel>
+            <Panel headerText = "3번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+            <HBox>
+                <Input id = "gugudan2" width = "2rem"/>
+                <Text text = "단" width = "2rem" />
+                <Button text = "Calcul"
+                        icon = "sap-icon://begin"
+                        type = "Success"
+                        press = "onCalcul()" />
+            </HBox>
+            </Panel>
+            <Panel headerText = "4번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+            <HBox>
+                <Button text = "Calcul"
+                        icon = "sap-icon://begin"
+                        type = "Success"
+                        press = "onCliCal()" />
+            </HBox>
+            </Panel>
+
+            <Panel headerText = "5번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+            <HBox>
+                <Button text = "결과"
+                        icon = "sap-icon://begin"
+                        type = "Success"
+                        press = "onSum()"
+                        width = "5rem"  />
+                <Label text = "값 = "/>
+                <Text id = "result" />          <!-- text에도 id를 설정할 수 있음에 유의 -->
+            </HBox>
+            </Panel>
+
+            <Panel headerText = "6번 문제" class = "sapUiResponsiveMargin" width = "20rem">
+                <Button text = "Show all properties"
+                        icon = "sap-icon://begin"
+                        type = "Success"
+                        press = "onShowAll()"  />
+            </Panel>
+
+        </VBox>
+
+    </Page>
+</mvc:View>

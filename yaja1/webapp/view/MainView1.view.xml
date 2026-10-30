@@ -1,0 +1,59 @@
+<mvc:View controllerName="yaja1.yaja1.controller.MainView1"
+    xmlns:t="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page   id="page"
+            title="{i18n>title}"
+            showHeader="false"
+            enableScrolling="false"
+            class = "sapUiContentPadding">
+
+        <t:Table    rows = "{/Player}"
+                    selectionMode="Single"
+                    paste = "onPaste"
+                    ariaLabelledBy="title"
+                    visibleRowCount = "5">
+
+            <t:extension>
+                <OverflowToolbar style = "Clear">
+                    <Title id = "title" text = "Player" />
+                </OverflowToolbar>
+            </t:extension>
+
+            <t:columns>     
+                <t:Column width="15rem">
+                    <Label text = "Name" />
+                    <t:template>
+                        <Text text = "{Name}" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+
+            <t:columns>     
+                <t:Column width="15rem">
+                    <Label text = "Country" />
+                    <t:template>
+                        <Text text = "{Country}" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+
+            <t:columns>     
+                <t:Column width="15rem">
+                    <Label text = "Height" />
+                    <t:template>
+                        <Text text = "{Height}" />
+                    </t:template>
+                </t:Column>
+            </t:columns>
+        
+        </t:Table>
+
+        
+
+    </Page>
+
+</mvc:View>

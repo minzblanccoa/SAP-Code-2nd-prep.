@@ -1,0 +1,48 @@
+<mvc:View controllerName="code2.cl2.code2.cl2.b2107.controller.WorkView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+        <VBox> <!-- Vertical Box -->
+        <!-- 하나씩 따로 보는 게 좋음. text ="", press ="", icon ="" 이런 식으로... -->
+            <Text text = "Hello world" />
+            <!-- text이하를 진한 글씨로 출력 -->
+            <Label text = "이것은 이름표" />
+            <!-- text이하를 연한 글씨로 출력 -->
+            <Button text = "Say Hello" press = "onShowHello()" icon = "sap-icon://accept" />
+            <!-- 버튼의 텍스트를 Say Hello로 설정,
+            누르면(press) onShowHello라는 js함수를 불러온다,
+            icon은 위와 같다. -->
+            <Input value = "{/desc/val}" description = "{/desc/dec}" width = "20rem" />
+            <!-- Input 박스의 값은 '중괄호'와 '/(Slash)'로 표현한다*(데이터의 경로("{/desc/val}")가 들어가 있음).
+            description은 Input 박스 옆에 나타난다. 너비는 20rem이다. -->
+            <Input value = "{/league/team}" description = "{/league/area}" width = "20rem" />
+            <!-- Input 박스의 값은 '중괄호'와 '/(Slash)'로 표현한다*(데이터의 경로("{/league/team}")가 들어가 있음).
+            description은 Input 박스 옆에 나타난다. 너비는 20rem이다. -->
+
+            <HBox> <!-- Horizonal Box -->
+                <Label text = "Email" />
+                <!-- text이하를 연한 글씨로 출력 -->
+                <Input placeholder = "example@sap.com" width = "15rem" showClearIcon = "true" />
+                <!-- Input 박스의 안에 연한 글씨로 placeholder =""를 넣는다.
+                너비는 15rem이다.
+                showClearIcon을 true로 설정하면 Input 박스 내에 작성 시 지우기 버튼(x모양)이 생긴다. -->
+            </HBox>
+
+            <HBox>
+                <Input id = "Word" width = "10rem" editable = "false" />
+                <!-- Input 박스에 고유번호(ID) "Word"를 부여한다.
+                너비는 10rem이고,
+                editable이 false면 수정 불가한 읽기 전용이다. -->
+                <Button text = "Word"
+                        press = "setWord()"
+                        icon = "sap-icon://add"
+                        type = "Emphasized" />
+                <!-- 버튼에 "Word"라는 글자를 넣어준다.
+                누르면(press) setWord라는 js함수를 불러온다.
+                icon은 위와 같다. -->
+            </HBox>
+        </VBox>
+
+    </Page>
+</mvc:View>

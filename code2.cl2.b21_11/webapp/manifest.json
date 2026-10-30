@@ -1,0 +1,98 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "jsontable.code2.cl2.b2111",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "27407ef0-74c4-4c00-acfc-abc92c3760be"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.52",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "jsontable.code2.cl2.b2111.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "jsontable.code2.cl2.b2111.view",
+        "async": true,
+        "viewPath": "jsontable.code2.cl2.b2111.view"
+      },
+      "routes": [
+        {
+          "name": "RouteTableView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetTableView"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetTableView": {
+          "id": "TableView",
+          "name": "TableView"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "jsontable.code2.cl2.b2111.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

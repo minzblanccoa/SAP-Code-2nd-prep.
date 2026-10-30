@@ -1,0 +1,47 @@
+<mvc:View controllerName="code2cl2basic01b21.code2cl2basic01b21.controller.BasicSession"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="베이직 세션">
+
+        <VBox>
+            <Text text = "SAP Code2 Class2" />
+            <Text text = "Class 2 조민제" />
+            <Label text = "구로디지털단지 2번 출구" design = "Bold" />
+            <Label text = "걸어서 10분 거리" design = "Bold" />
+
+        <HBox>
+            <Text text = "ID" width = "5rem" />
+            <Input id = "identi" width = "5rem" submit = "onClick()" />
+        </HBox>
+
+        <HBox>
+            <Text text = "Name" width = "5rem" />
+            <Input width = "5rem" />
+        </HBox>
+
+        <HBox>
+            <Text text = "Age" width = "5rem" />
+            <Input width = "5rem" />
+        </HBox>
+
+        <HBox>
+            <Input width = "10rem" showClearIcon="true" placeholder="Address" />
+            <Button text = "Clear" />
+        </HBox>
+
+        <HBox>
+            <Input width = "15rem" placeholder="Hobby" value = "Please write only one hobby" />
+        </HBox>
+
+        </VBox>
+
+        <VBox>
+        
+            <Text text = "실습 : 1~10 초과 확인"/>
+            <Input id = "text1" placeholder = "Input Class" width = "10rem" showClearIcon = "true" />
+            <Button text = "IF 확인" press = "ifCheck01" />
+        
+        </VBox>
+
+    </Page>
+</mvc:View>

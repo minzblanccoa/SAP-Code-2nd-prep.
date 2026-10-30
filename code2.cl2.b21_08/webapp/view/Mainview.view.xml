@@ -1,0 +1,26 @@
+<mvc:View controllerName="ui5.func.code2.cl2.b2108.controller.Mainview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+        <VBox>
+            <Panel headerText = "Action Step 1" class = "sapUiResponsiveMargin" width = "50rem">
+                <HBox>
+                    <Input id = "fruit" width = "15rem" />
+                    <Button text = "OK" type = "Success" press = "onClick()" />
+                </HBox>
+                <Text id = "itext" width = "15rem" />
+            </Panel>
+
+            <Panel headerText = "Action Step 2" class = "sapUiResponsiveMargin" width = "50rem">
+            
+                <Input id = "size" width = "5rem" submit = "setWidth()" />
+
+                <Button text = "Change" press = "setWidth()" />
+
+            </Panel>
+
+        </VBox>
+
+    </Page>
+</mvc:View>

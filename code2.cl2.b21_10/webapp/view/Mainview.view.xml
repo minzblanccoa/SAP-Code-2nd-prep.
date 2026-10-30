@@ -1,0 +1,18 @@
+<mvc:View controllerName="code2.cl2.b21.code2.cl2.b2110.controller.Mainview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="피곤해">
+        <Panel headerText = "음식" class = "sapUiResponsiveMargin" width = "30rem">
+            <Text id = "Zzajang" />
+        </Panel>
+
+        <Panel headerText = "음식" class = "sapUiResponsiveMargin" width = "30rem">
+            <Text id = "Menu" />
+        </Panel>
+
+        <Panel headerText = "Baseball" class = "sapUiResponsiveMargin" width = "30rem">
+            <Button text = "Team" type = "Neutral" press = "onTeam()" />
+        </Panel>
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,121 @@
+<mvc:View controllerName="code2.cl2.b21.code2.cl2.b2112.controller.TableView2"
+    xmlns:t="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+    <Page   id="page"
+            title="{i18n>title}"
+            showHeader="false"
+            enableScrolling="false"
+            class="sapUiContentPadding">
+        
+        <VBox>
+            <Panel headerText="Airline" width = "40rem" class = "sapUiResponsiveMagin">
+                <t:Table    rows="{/AirlineSet}"
+                            selectionMode="Single"
+                            paste="onPaste"
+                            ariaLabelledBy="title"
+                            visibleRowCount="5">
+
+                    <t:extension>
+                        <OverflowToolbar style = "Clear">
+						    <Title id = "title1" text = "Airlines"/> <!-- title의 property -->
+					    </OverflowToolbar>
+                    </t:extension>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Airlines"/>
+                            <t:template>
+                                <Text text = "{Carrid}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Name"/>
+                            <t:template>
+                                <Text text = "{Name}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Country"/>
+                            <t:template>
+                                <Text text = "{Country}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                    <t:columns>
+                        <t:Column>
+                            <t:template>
+                                <Input value = "" width = "15rem" />
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                </t:Table>
+            </Panel>    
+        </VBox>
+        
+        <VBox>
+        <Panel headerText="Airline" width = "40rem" class = "sapUiResponsiveMagin">
+            <t:Table rows = "{cust>/Customer}"
+                    selectionMode = "Single"
+                    paste = "onPaste"
+                    ariaLabelledBy="title"
+                    visibleRowCount="3">
+                
+                <t:extension>
+                    <OverflowToolbar style = "Clear">
+                        <Title id = "title2" text = "Customer">
+                        
+                        </Title>
+                    </OverflowToolbar>
+                </t:extension>
+
+                <t:columns>
+                
+                    <t:Column width="15rem">
+                        <Label text="Customer" />
+                        <t:template>
+                            <Text text = "{cust>Kunnr}" />
+                        </t:template>
+                    </t:Column>
+
+                </t:columns>
+
+                <t:columns>
+                
+                    <t:Column width="15rem">
+                        <Label text="Name" />
+                        <t:template>
+                            <Text text = "{cust>Name}" />
+                        </t:template>
+                    </t:Column>
+
+                </t:columns>
+
+                <t:columns>
+                
+                    <t:Column width="15rem">
+                        <Label text="Street" />
+                        <t:template>
+                            <Text text = "{cust>Street}" />
+                        </t:template>
+                    </t:Column>
+
+                </t:columns>
+
+                
+
+            </t:Table>
+        </Panel>
+        </VBox>
+    </Page>
+</mvc:View>
