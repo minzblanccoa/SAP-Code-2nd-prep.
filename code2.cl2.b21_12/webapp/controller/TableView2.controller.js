@@ -7,7 +7,7 @@ sap.ui.define([
     return Controller.extend("jsontable.code2.cl2.b2111.controller.TableView", {
         onInit() {
 
-            var oData = {
+            var oData1 = {
                 AirlineSet : [
                     {
                         Carrid : "AA",
@@ -37,10 +37,6 @@ sap.ui.define([
                 ]
             }
 
-            var oModel = new JSONModel(oData);  //Import Model
-            this.getView().setModel(oModel);    //Set Model -> id가 공백임
-            console.log(oModel);                //id가 공백인 애를 불러와
-
 
             var oData2 = {
                 Customer : [
@@ -62,9 +58,11 @@ sap.ui.define([
                 ]
             }
 
+            var oModel1 = new JSONModel(oData1);                    //Import model
             var oModel2 = new JSONModel(oData2);
+            this.getView().setModel(oModel1);                       //Set Model -> id가 공백임
             this.getView().setModel(oModel2, "cust");               //Set Model -> cust라는 id를 부여한 모델
-            console.log(oModel);
+            console.log(oModel1);
         }
     });
 });

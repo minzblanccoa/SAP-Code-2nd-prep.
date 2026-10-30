@@ -11,7 +11,7 @@ sap.ui.define([
             //Create JSON Model data
             var vOData = {                              //json model은 {중괄호}로 쌓여있음
                 FoodSet : [                             //안에 데이터셋 설정[대괄호로]
-                    {                                   //Grid Table'로 표시 가능
+                    {                                   //'Grid Table'로 표시 가능
                         Food : "Noodle",
                         Area : "Guro"
                     },

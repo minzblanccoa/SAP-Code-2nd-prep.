@@ -1,0 +1,123 @@
+<mvc:View controllerName="code2.cl2.code2.cl2.b2113.controller.MainView2"
+    xmlns:t="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page   id="page"
+            title="{i18n>title}"
+            showHeader="false"
+            enableScrolling="true"
+            class="sapUiContentPadding">
+
+        <VBox>
+
+            <Panel headerText="문제 1" width = "50rem" class = "sapUiResponsiveMargin" >
+                <HBox >
+                    <Text text = "Horizon" width = "3rem" />
+                    <Input id = "h1" width = "3rem" />
+                </HBox>
+
+                <HBox >
+                    <Text text = "Vertical" width = "3rem" />
+                    <Input id = "v1" width = "3rem"/>
+                </HBox>
+
+                <HBox >
+                    <Text text = "Area" width = "3rem" />
+                    <Input id = "area" width = "3rem"/>
+                </HBox>
+
+                    <Button text = "Calcul"
+                            icon = "sap-icon://begin"
+                            type = "Success"
+                            press = "onClick()" />
+            </Panel>
+
+            <Panel headerText="문제 2" width = "50rem" class = "sapUiResponsiveMargin" >
+                <VBox>
+                    <Input  id = "fruit"
+                            submit = "onResult"
+                            width = "3rem"/>
+
+                    <Text id = "fResult" width = "3rem" textAlign="Center" />
+                </VBox>
+            </Panel>
+
+            <Panel headerText="문제 3" width = "50rem" class = "sapUiResponsiveMargin" >
+                <VBox>
+                    <HBox>
+                        <Text text = "원 가격" width="3rem" />
+                        <Input id = "won" width="3rem"/>
+                        <Text text = "원" /> 
+                    </HBox>
+
+                    <HBox>
+                        <Text text = "할인율" width="3rem" />
+                        <Input id = "disc" width="3rem"/>
+                        <Text text = "%" /> 
+                    </HBox>
+
+                    <HBox>
+                        <Text text = "할인된 가격" width="3rem" />
+                        <Input id = "result" width="3rem" editable="false" />
+                        <Text text = "원" /> 
+                    </HBox>
+
+                    <Button text = "Calcul"
+                            icon = "sap-icon://begin"
+                            type = "Success"
+                            press = "onDiscount()" />
+                </VBox>
+            </Panel>
+
+                <VBox>
+            <Panel headerText="Vehicle set" width = "50rem" class = "sapUiResponsiveMargin">
+                <t:Table    rows="{/VehicleSet}"
+                            selectionMode="Single"
+                            paste="onPaste"
+                            ariaLabelledBy="title"
+                            visibleRowCount="5">
+
+                    <t:extension>
+                        <OverflowToolbar style = "Clear">
+						    <Title id = "title1" text = "Vihicle"/> <!-- title의 property -->
+					    </OverflowToolbar>
+                    </t:extension>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Car"/>
+                            <t:template>
+                                <Text text = "{Car}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Oil"/>
+                            <t:template>
+                                <Text text = "{Oil}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                    <t:columns>
+                        <t:Column width = "15rem">
+                            <Label text = "Comp"/>
+                            <t:template>
+                                <Text text = "{Comp}"/>
+                            </t:template>
+                        </t:Column>
+                    </t:columns>
+
+                </t:Table>
+            </Panel>    
+        </VBox>
+
+        </VBox>
+
+    </Page>
+</mvc:View>
